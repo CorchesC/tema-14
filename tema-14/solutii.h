@@ -18,3 +18,12 @@ void sol2() {
 	cin >> s;
 	secventeEgaleCuSumaAfisare(v, d,s); ////?
 }
+void sol3() {
+	//(40) 40. Fie un tablou unidimensional cu n elemente valori naturale. Să se determine o submulțime de elemente din tabloul citit, pentru care suma elementelor este divizibilă cu n.
+	int v[100], d = 0;
+	citire(v, d);
+	cout << "Introduecti x: " << endl;
+	int x;
+	cin >> x;
+	secventaSumaDivizibilaCuX(v, d, x);
+}
