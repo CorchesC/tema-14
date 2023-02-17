@@ -4,6 +4,7 @@ int main()
 {
 	//sol1();
 	//sol2(); /?
-	sol3();
+	//sol3();
+	sol4();
 }
 

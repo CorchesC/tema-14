@@ -15,6 +15,18 @@ void citire(int v[], int& dim) {
 
 	f.close();
 }
+void citire2(int v[], int& dim) {
+
+	ifstream f("numere2.txt");
+
+	f >> dim;
+	for (int i = 0; i < dim; i++) {
+
+		f >> v[i];
+	}
+
+	f.close();
+}
 void afisare(int v[], int dim) {
 	for (int i = 0; i < dim; i++) {
 		cout << v[i] << " ";
@@ -74,3 +86,67 @@ void secventaSumaDivizibilaCuX(int v[], int dim, int x) {
 	}
 	cout << endl;
 }
+void bubbleSort(int v[], int dim) {
+	bool aff = true;
+	do {
+		aff = true;
+		for (int j = 0; j < dim - 1; j++) {
+			if (v[j] > v[j + 1]) {
+				int aux = v[j];
+				v[j] = v[j + 1];
+				v[j + 1] = aux;
+				aff = false;
+			}
+		}
+	} while (aff == false);
+
+}
+void interclasarePare(int v[], int dim, int x[], int dim2, int inter[], int& d) {
+	d = 0;
+	int i = 0;
+	int j = 0;
+	int k = 0;
+	bubbleSort(v, dim);
+	bubbleSort(x, dim2);
+	if (v[i] % 2 == 0 && v[j] % 2 != 0) {
+		while (i < dim && j < dim2) {
+			if (v[i] == x[j]) {
+
+				inter[k] = v[i];
+				i++;
+				k++;
+				j++;
+			}
+			if (v[i] < x[j]) {
+
+				inter[k] = v[i];
+				i++;
+				k++;
+			}
+			if (v[i] > x[j]) {
+				inter[k] = x[j];
+				j++;
+				k++;
+			}
+		}
+		while (i < dim) {
+
+			inter[k] = v[i];
+			k++;
+
+		}
+		while (j < dim2) {
+
+			inter[k] = x[j];
+			k++;
+
+		}
+		d = k;
+	}
+	else if (v[i] % 2 != 0 && v[j] % 2 == 0) {
+		i++;
+	}
+	else if (v[i] % 2 == 0 && v[j] % 2 != 0) {
+		j++;
+	}
+}  

@@ -27,3 +27,13 @@ void sol3() {
 	cin >> x;
 	secventaSumaDivizibilaCuX(v, d, x);
 }
+void sol4() {
+	//(41) Se consideră doi vectori de lungime n respectiv m ce conține elemente naturale ordonate crescător.Se cere interclasarea valorilor pare din cei doi vectori.În urma interclasării elementele vor fi plasate într - un nou vector.
+	int v[100], d = 0;
+	citire(v, d);
+	int n[100], k = 0;
+	citire2(v, d);
+	int i[100], d2 = 0;
+	interclasarePare(v, d, n, k, i, d2);
+	afisare(i, d2);
+}
