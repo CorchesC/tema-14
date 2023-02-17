@@ -47,3 +47,10 @@ void sol5() {
 	interclasareSol5(v, d, n, k, i, d2);
 	afisare(i, d2);
 }
+void sol6() {
+	//(46)  Se citeşte de la tastatură n elemente ale unui vector. Să se realizeze un program care şterge elementele situate între prima apariție a unui element cub perfect şi ultima apariție a unui element cub perfect.
+	int v[100], d = 0;
+	citire(v, d);
+	stergereprimulSiUltimulElementCubPerfect(v, d);
+	afisare(v, d);
+}

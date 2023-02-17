@@ -212,3 +212,35 @@ void interclasareSol5(int v[], int& dim, int x[], int dim2, int inter[], int& d)
 		j++;
 	}
 }
+void sterge(int v[], int& dim, int p) {
+
+	for (int i = p; i < dim; i++) {
+		v[i] = v[i + 1];
+	}
+	dim--;
+}
+bool cubPerfect(int n) {
+	//??
+}
+void stergereprimulSiUltimulElementCubPerfect(int v[], int dim) {
+	int cst = 0;
+	int pe = 0;
+	int ue = 0;
+	for (int i = 0; i < dim; i++) {
+		if (cubPerfect(v[i]) == true) {
+			if (cst == 0) {
+				pe = v[i];
+				cst = 1;
+			}
+			if (v[i] > 0) {
+				ue = v[i];
+			}
+		}
+
+	}
+	for (int j = 0; j < dim; j++) {
+		if (j > pe && j < ue) {
+			sterge(v, dim, j);
+		}
+	}
+}
