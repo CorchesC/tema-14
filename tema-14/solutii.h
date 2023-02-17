@@ -37,3 +37,13 @@ void sol4() {
 	interclasarePare(v, d, n, k, i, d2);
 	afisare(i, d2);
 }
+void sol5() {
+	//(45)  Se citesc de la tastatură valorile din doi vectori. Primul conține n elemente în ordine crescătoare, iar al doilea m elemente în ordine descrescătoare.Să se realizeze un program care interclasează doar elementele impare din cei doi vectori ci afisează ne ecran şirul obținut.
+	int v[100], d = 0;
+	citire(v, d);
+	int n[100], k = 0;
+	citire2(v, d);
+	int i[100], d2 = 0;
+	interclasareSol5(v, d, n, k, i, d2);
+	afisare(i, d2);
+}
